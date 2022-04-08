@@ -1,0 +1,10 @@
+---
+title: "Zane's reading log!"
+description: |
+  A blog by default, but more like a public journal where I keep track of what
+  I am reading and thinking about. It makes me feel more accountable to do it
+  on the internet.
+site: distill::distill_website
+preview: static/cover-image.jpg
+listing: posts
+---
