@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "path": "posts/2022-04-08_first-post/",
+    "title": "Welcome to my blog!",
+    "description": "This is my first blog post. I created this to make sure I know how to make a blog post.",
+    "author": [
+      {
+        "name": "Zane Billings",
+        "url": "https://wzbillings.com"
+      }
+    ],
+    "date": "2022-04-08",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n\r\nMotivation: one of my bad habits as a PhD student so far has been not\r\nreading any papers, then whenever it’s time to work on something,\r\nreading 100 abstracts at one time and only the papers that seem the most\r\nimportant. I’ve decided to work on that by attempting to read a paper a\r\nday. Every day when I come to the office, the first thing I will do is\r\nread a paper.\r\nI currently have a backlog of printed-out papers to read, so I’ll try\r\nand get through those first unless something really catches my\r\nattention. I’ll be as strict as I can, but some days I know I just won’t\r\nhave time (I run into a lot of time crunches recently…) and some days\r\nI’ll probably read more than one paper. Maybe I’ll make two blog posts\r\non those days.\r\nI read somewhere that one of the best ways to remember the take-home\r\npoints of a paper is to write down a summary with your thoughts\r\nimmediately after reading (and annotating!) the paper, so that was the\r\nimpetus for this blog.\r\nMaybe at some point I’ll figure out how to set up comments on this\r\nblog (I bet Alison Hill has a blog post about how to do it) but for now,\r\nif you want to get in touch with me to tell me how much you love my blog\r\nor that I completely misinterpreted your paper, go back to my main site and get\r\nmy contact info there.\r\n\r\n\r\nLast updated\r\n2022-04-08 18:33:28 EDT\r\nDetails\r\nsource\r\ncode, R\r\nenvironment\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-04-08T18:33:30-04:00",
+    "input_file": {}
+  }
+]

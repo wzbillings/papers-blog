@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Reading Log</title>
+    <link>https://papers.wzbillings.com/</link>
+    <atom:link href="https://papers.wzbillings.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>A blog about what Zane is reading.
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Fri, 08 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Welcome to my blog!</title>
+      <dc:creator>Zane Billings</dc:creator>
+      <link>https://papers.wzbillings.com/posts/2022-04-08_first-post</link>
+      <description>This is my first blog post. I created this to make sure I know how to make a blog post.</description>
+      <guid>https://papers.wzbillings.com/posts/2022-04-08_first-post</guid>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -2,6 +2,7 @@ name: "papers-blog"
 title: "Reading Log"
 description: |
   A blog about what Zane is reading.
+base_url: https://papers.wzbillings.com/
 output_dir: "_site"
 navbar:
   right:

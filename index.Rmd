@@ -5,6 +5,5 @@ description: |
   I am reading and thinking about. It makes me feel more accountable to do it
   on the internet.
 site: distill::distill_website
-preview: static/cover-image.jpg
 listing: posts
 ---

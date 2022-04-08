@@ -6,7 +6,7 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-08T18:14:14-04:00"
+      "last_modified": "2022-04-08T18:34:14-04:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,7 @@
       "description": "A blog by default, but more like a public journal where I keep track of what\nI am reading and thinking about. It makes me feel more accountable to do it\non the internet.\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-08T18:14:16-04:00"
+      "last_modified": "2022-04-08T18:34:16-04:00"
     },
     {
       "path": "uses.html",
@@ -22,7 +22,7 @@
       "description": "What do I use to make this blog and read papers?",
       "author": [],
       "contents": "\r\nFor reading\r\nRight now, I currently print out my most important papers, draw on\r\nthem with a pen and highlighter, and put them in a filing cabinet under\r\nmy desk. I put them in a file folder labeled ‘current work’ and take\r\nthat home if I will need the papers at home. It is not a very efficient\r\nsystem. In the future, I’m considering getting a tablet computer\r\nexplicitly for reading papers. I’m considering something from the\r\nmicrosoft surface line so I can get instant compatibility with Calibre\r\nand Zotero.\r\nI use Zotero to store all my references. The only time I’ve used\r\nanother reference manager was to use EndNote for its quicker\r\ndeduplication method. After trying to use EndNote I think in the future\r\nI will just deal with Zotero’s slower deduplication.\r\nFor blogging\r\nThis website was made with distill and R\r\nMarkdown. I also made a lot of adaptations based on Danielle\r\nNavarro’s workflow and I use her refinery package to\r\ncreate new posts (with renv if they are code heavy). I use\r\nrenv to manage the overall project dependencies as well. My\r\ncode is hosted on GitHub and hosted\r\nvia Netlify.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-08T18:14:18-04:00"
+      "last_modified": "2022-04-08T18:34:18-04:00"
     }
   ],
   "collections": ["posts/posts.json"]
