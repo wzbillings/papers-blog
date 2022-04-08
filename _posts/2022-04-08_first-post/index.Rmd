@@ -11,6 +11,7 @@ author:
     affiliation_url: https://publichealth.uga.edu/
     orcid_id:  0000-0002-0184-6134
 date: 2022-04-08
+preview: img.jpg
 creative_commons: CC BY-SA
 citation_url: https://blog.wzbillings.com/first-post 
 repository_url: https://github.com/wzbillings/papers-blog/
