@@ -1,0 +1,79 @@
+---
+title: "Welcome to my blog!"
+description:
+  This is my first blog post. I created this to make sure I know how to make
+  a blog post.
+author:
+  - first_name: "Zane"
+    last_name: "Billings"
+    url: https://wzbillings.com
+    affiliation: University of Georgia
+    affiliation_url: https://publichealth.uga.edu/
+    orcid_id:  0000-0002-0184-6134
+date: 2022-04-08
+creative_commons: CC BY SA
+citation_url: https://blog.wzbillings.com/first-post 
+repository_url: https://github.com/wzbillings/papers-blog/
+output:
+  distill::distill_article:
+    self_contained: false
+params:
+  slug: first-post
+  date: 2022-04-08
+  repo: wzbillings/papers-blog
+  site: https://blog.wzbillings.com/
+bibliography: http://127.0.0.1:23119/better-bibtex/export/collection?/1/CHZJLM59.bibtex
+---
+
+<!---
+The template for this post was pretty much copied from the template created
+by Danielle Navarro for her blog. https://github.com/djnavarro/distill-blog
+She does awesome work and you should check her blog out!
+---->
+
+<!----
+checklist:
+  - check the "update me" messages in YAML above
+  - initialise the _renv folder with refinery::renv_new("name of post folder")
+  - populate the lockfile with refinery::renv_snapshot("name of post folder")
+  - update the _renv folder from snapshot with refinery::restore("name of post folder")
+---->
+
+
+<!--------------- setup post ----------------->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+refinery::renv_load(paste(params$date, params$slug, sep = "_"))
+```
+
+
+<!--------------- post ----------------->
+
+Motivation: one of my bad habits as a PhD student so far has been not reading any papers, then whenever it's time to work on something, reading 100 abstracts at one time and only the papers that seem the most important. I've decided to work on that by attempting to read a paper a day. Every day when I come to the office, the first thing I will do is read a paper.
+
+I currently have a backlog of printed-out papers to read, so I'll try and get through those first unless something really catches my attention. I'll be as strict as I can, but some days I know I just won't have time (I run into a lot of time crunches recently...) and some days I'll probably read more than one paper. Maybe I'll make two blog posts on those days.
+
+I read somewhere that one of the best ways to remember the take-home points of a paper is to write down a summary with your thoughts immediately after reading (and annotating!) the paper, so that was the impetus for this blog.
+
+Maybe at some point I'll figure out how to set up comments on this blog (I bet Alison Hill has a blog post about how to do it) but for now, if you want to get in touch with me to tell me how much you love my blog or that I completely misinterpreted your paper, go [back to my main site](https://wzbillings.com/#contact) and get my contact info there.
+
+<!--------------- appendices ----------------->
+
+```{r, echo=FALSE}
+refinery::insert_appendix(
+  repo_spec = params$repo, 
+  name = paste(params$date, params$slug, sep = "_")
+)
+```
+
+
+<!--------------- miscellanea ----------------->
+
+```{r redirect, echo=FALSE}
+refinery::insert_netlify_redirect(
+  slug = params$slug, 
+  date = params$date
+)
+```
+

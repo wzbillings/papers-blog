@@ -1,0 +1,19 @@
+---
+title: "Uses"
+description: |
+  What do I use to make this blog and read papers?
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# For reading
+
+Right now, I currently print out my most important papers, draw on them with a pen and highlighter, and put them in a filing cabinet under my desk. I put them in a file folder labeled 'current work' and take that home if I will need the papers at home. It is not a very efficient system. In the future, I'm considering getting a tablet computer explicitly for reading papers. I'm considering something from the microsoft surface line so I can get instant compatibility with Calibre and Zotero.
+
+I use Zotero to store all my references. The only time I've used another reference manager was to use EndNote for its quicker deduplication method. After trying to use EndNote I think in the future I will just deal with Zotero's slower deduplication.
+
+# For blogging
+
+This website was made with [`distill`](https://rstudio.github.io/distill/) and R Markdown. I also made a lot of adaptations based on [Danielle Navarro's workflow](https://blog.djnavarro.net/posts/2021-09-30_on-blogging-reproducibly/) and I use her `refinery` package to create new posts (with `renv` if they are code heavy). I use `renv` to manage the overall project dependencies as well. My code is hosted on [GitHub](https://github.com/wzbillings/papers-blog) and hosted via Netlify.
