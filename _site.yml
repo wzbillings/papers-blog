@@ -5,8 +5,12 @@ description: |
 output_dir: "_site"
 navbar:
   right:
+    - text: "Main"
+      href: https://wzbillings.com/
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Uses"
+      href: uses.html
 output: distill::distill_article
