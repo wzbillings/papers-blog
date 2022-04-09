@@ -1,0 +1,91 @@
+---
+title: "2022-04-08: Immune imprinting and epitope masking!" # <---- UPDATE ME
+description: |
+  Today I read 'Influenza immunization in the context of preexisting immunity' by
+  Linderman et al. from Cold Spring Harbor Perspectives in Medicine (2021). This
+  review discusses how influenza vaccines can induce different immune responses
+  based on an individual's immune profile prior to vaccination. A few mechanisms
+  and previous results explaining this phenomenon are discussed, including
+  immune imprinting and epitope masking.
+author:
+  - first_name: "Zane"
+    last_name: "Billings"
+    url: https://wzbillings.com
+    affiliation: University of Georgia
+    affiliation_url: https://publichealth.uga.edu/
+    orcid_id:  0000-0002-0184-6134
+date: 2022-04-08
+preview: 2022-04-08.jpg  # <---- UPDATE ME 
+creative_commons: CC BY-SA
+citation_url: https://blog.wzbillings.com/Linderman-Influenza-immunity-in 
+repository_url: https://github.com/wzbillings/papers-blog/
+output:
+  distill::distill_article:
+    self_contained: false
+params:
+  slug: Linderman-Influenza-immunity-in
+  date: 2022-04-08
+  repo: wzbillings/papers-blog
+  site: https://blog.wzbillings.com/
+---
+
+<!---
+The template for this post was pretty much copied from the template created
+by Danielle Navarro for her blog. https://github.com/djnavarro/distill-blog
+She does awesome work and you should check her blog out!
+---->
+
+<!----
+checklist:
+  - check the "update me" messages in YAML above
+  - initialise the _renv folder with refinery::renv_new("name of post folder")
+  - populate the lockfile with refinery::renv_snapshot("name of post folder")
+  - update the _renv folder from snapshot with refinery::restore("name of post folder")
+---->
+
+
+<!--------------- setup post ----------------->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+refinery::renv_load(paste(params$date, params$slug, sep = "_"))
+```
+
+
+<!--------------- post ----------------->
+
+The paper I read today is:
+
+> Linderman, Susanne L., Ali H. Ellebedy, Carl Davis, Christiane S. Eberhardt, Rustom Antia, Rafi Ahmed, and Veronika I. Zarnitsyna. “Influenza Immunization in the Context of Preexisting Immunity.” Cold Spring Harbor Perspectives in Medicine, September 28, 2020, a040964. https://doi.org/10.1101/cshperspect.a040964.
+
+My main research focus right now is on how characteristics of individuals and characteristics of virus strains can work together to effect the immune response to the seasonal flu vaccine, so this review is something I've been meaning to get to for a while. I've already read a lot of the constituent citations, but at some point I plan to reread them and input my thoughts here. Maybe it will help me remember them better.
+
+In general, immunologists have pretty good proof that immunity to influenza is (at least partially) "path dependent." The so-called **immune profile**^[the unique characteristics of an individual's immune system, like the antibody repertoire, specificity and amount of memory B cells, cytokine profiles, and so on] of an individual is affected by the strains of influenza they are exposed to, as one would likely expect. An individual infected with a specific strain of influenza will likely have a memory immune response to that strain. However, an individual who is infected with H1N1 then H3N2 later will have an immune profile that is quite different from an individual who is infected with H3N2 then H1N1 later! In general, prior immunity to one strain tends to shape the individual's immune response to future strains. This phenomenon is called "original antigenic sin" or **immune imprinting**.
+
+The main conclusions supported by the review are: preexisting immunity somehow inhibits the ability to mount an immune response to a novel strain of the same pathogen; memory recall responses to conserved epitopes or that bind weakly to antigenically drifted epitopes are at least partially responsible; preexisting antibody titers inhibit the magnitude of the antibody response; high antibody titers for specific epitopes can lead to an immune response where another antibody is immunodominant; and epitope masking, where antibody binding to antigen inhibits the activation of the memory B-cell response, is a potential explanation for the boosting of responses to different epitopes.
+
+The conclusions that preexisting immunity often inhibits the immune response to drifted flu strains, and that the memory B cell response is a cause of this phenomenon were not new to me. Although I still don't really know what I'm talking about, I knew that clonal selection of B-cells leads to memory B cells with high affinity for antigen -- so similar antigens can activate the memory response, which makes mounting a novel response more difficult. The relationship between fold change in antibodies and preexisting immunity is quite interesting to me -- I have been working with serological data where I see this exact pattern, and part of my current research is about this specific phenomenon. I think the patterns of boosting and the explanation of epitope masking are interesting, but like with all mathematical models, I think explicit biological studies are necessary to confirm the findings. While the mathematical models which support epitope masking as an explanation for boosting to different epitopes are interesting, unless lab data can show that epitope masking or steric hinderance is possible and actually occurring in this case, I'm not ready to believe that it is the sole cause of this phenomenon.
+
+I'm also primarily interested in the seasonal influenza vaccine, where most boosting events are not to novel strains, but instead to antigenically drifted strains which (in the grand scheme of things) are not that different. Both the original source paper and the review note that epitope masking may not explain the ability of prevaccination immunity to an antigenically different, but similar, strain to inhibit the formation of a novel immune response. Although it seems biologically plausible to me that the memory B cell response is playing a large role in the inhibition of a novel response.
+
+It sort of took me all day to read this review. It is fairly dense and I kept getting interrupted by my thoughts and other things, so it took me a while to read. So my thoughts in this post are probably quite choppy and not super cogent. But overall, I was already aware of most of the work that went into this review, but I am glad to have all of the information summarized in one place. The review also talks a lot about stem vs. head antibody, but most of the data that is available to me does not measure stem antibody (in fact, they only measure HAI titers, which is another issue altogether). However, I suspect that I will be reading through this paper's entire bibliography in the near feature.
+
+<!--------------- appendices ----------------->
+
+```{r, echo=FALSE}
+refinery::insert_appendix(
+  repo_spec = params$repo, 
+  name = paste(params$date, params$slug, sep = "_")
+)
+```
+
+
+<!--------------- miscellanea ----------------->
+
+```{r redirect, echo=FALSE}
+refinery::insert_netlify_redirect(
+  slug = params$slug, 
+  date = params$date
+)
+```
+

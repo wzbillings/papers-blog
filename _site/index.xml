@@ -17,5 +17,19 @@
       <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
       <media:content url="https://papers.wzbillings.com/posts/2022-04-08_first-post/img.jpg" medium="image" type="image/jpeg"/>
     </item>
+    <item>
+      <title>2022-04-08: Immune imprinting and epitope masking!</title>
+      <dc:creator>Zane Billings</dc:creator>
+      <link>https://papers.wzbillings.com/posts/2022-04-08_Linderman-Influenza-immunity-in</link>
+      <description>Today I read 'Influenza immunization in the context of preexisting immunity' by
+Linderman et al. from Cold Spring Harbor Perspectives in Medicine (2021). This
+review discusses how influenza vaccines can induce different immune responses
+based on an individual's immune profile prior to vaccination. A few mechanisms
+and previous results explaining this phenomenon are discussed, including
+immune imprinting and epitope masking.</description>
+      <guid>https://papers.wzbillings.com/posts/2022-04-08_Linderman-Influenza-immunity-in</guid>
+      <pubDate>Fri, 08 Apr 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://papers.wzbillings.com/posts/2022-04-08_Linderman-Influenza-immunity-in/2022-04-08.jpg" medium="image" type="image/jpeg"/>
+    </item>
   </channel>
 </rss>
