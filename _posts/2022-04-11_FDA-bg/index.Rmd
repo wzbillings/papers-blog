@@ -1,0 +1,94 @@
+---
+title: "FDA papers for class" # <---- UPDATE ME
+description:
+  I briefly read a few papers on functional data analysis that I need to read
+  for a class assignment. Hopefully the class assignment will be a paper
+  eventually as well.
+author:
+  - first_name: "Zane"
+    last_name: "Billings"
+    url: https://wzbillings.com
+    affiliation: University of Georgia
+    affiliation_url: https://publichealth.uga.edu/
+    orcid_id:  0000-0002-0184-6134
+date: 2022-04-11
+preview: img.jpg # <---- UPDATE ME 
+creative_commons: CC BY-SA
+citation_url: https://blog.wzbillings.com/FDA-bg 
+repository_url: https://github.com/wzbillings/papers-blog/
+output:
+  distill::distill_article:
+    self_contained: false
+params:
+  slug: FDA-bg
+  date: 2022-04-11
+  repo: wzbillings/papers-blog
+  site: https://blog.wzbillings.com/
+---
+
+<!---
+The template for this post was pretty much copied from the template created
+by Danielle Navarro for her blog. https://github.com/djnavarro/distill-blog
+She does awesome work and you should check her blog out!
+---->
+
+<!----
+checklist:
+  - check the "update me" messages in YAML above
+  - initialise the _renv folder with refinery::renv_new("name of post folder")
+  - populate the lockfile with refinery::renv_snapshot("name of post folder")
+  - update the _renv folder from snapshot with refinery::restore("name of post folder")
+---->
+
+
+<!--------------- setup post ----------------->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+refinery::renv_load(paste(params$date, params$slug, sep = "_"))
+```
+
+
+<!--------------- post ----------------->
+
+Today, I am unfortunately plagued by required reading, rather than continuing to attack my "to-read" pile on my desk. I didn't read these papers in complete detail, but rather skimmed over both of them.
+
+> Woldu H et al., Applying functional data analysis to assess tele-interpersonal psychotherapy's efficacy to reduce depression. *Journal of Applied Statistics.* 2019;46(2):203-216.
+
+> Yao F, Müller H, Wang J. Functional data analysis for sparse longitudinal data. *Journal of the American Statistical Association.* 2005;100(470):577-590.
+
+Some background on why I need to read these! I'm currently taking a course on "Advanced Biostatistics" which is essentially about reading biostatistical literature and applying the concepts, rather than just applying things from textbooks. For my course project, I'm reanalyzing some flu vaccine data (HAI titers over time) using functional data analysis techniques rather than hierarchical linear models. The main hurdle with this is that I do not know anything about functional data analysis, which is why I need to read about it. The first citation I've listed is by a former student in my program, who actually took the same class as me, and is a pretty readable implementation of some FDA methods. However, the data that I have are sparser than the data used in this paper, so I also looked at the second citation to get an idea for what methods are appropriate for sparse longitudinal data (I only have two measurements per year).
+
+While I'm normally not a fan of really complicated frequentist methods, there are a few points that I like about FDA enumerated in the Woldu paper. FDA doesn't require specification of a covariance structure, and also "automatically controls" for measurement error in a specific way. HAI titers are known to be subjective, and especially when not conducted with replicates, HAI data can often be subject to measurement error. FDA techniques deal with that by "smoothing" the data--from the time series of observations, a smoothed curve is constructed for analysis, typically using b-splines. This smoothing is the first step where I think most FDA methods depart from reality--no true data generating process uses b-splines in the wild. But b-splines are often a good approximation of smooth patterns. Influenza strain-specific serum antibody titer IS a "smooth" curve (of course no biological curve is smooth if you look at a small enough time scale), and HAI titer is a discrete surrogate for antibody titer. Of course it isn't a perfect measurement, but the literature does suggest that HAI titer is a correlate for influenza protection, and it's easier and cheaper than other assays. So I think that using a b-spline approximation to get smooth functions is ok.
+
+However, the second paper, on sparse data, says that although a former paper suggested a type of mixed-effects model with a b-spline basis for sparse longitudinal data, they "[represented] the trajectories directly through the Karhunen-Loève expansion." I was hoping to avoid dealing with this, as I do not understand the KL expansion at all. Notably, they dislike the previous paper using bootstrap for pointwise confidence intervals. I think the nonparametric bootstrap could probably be used in a way to get a CI for the whole curve (either by resampling individuals to include in the KL expansion or by resampling weights for the expansion somehow), but I'm never convinced that parametric intervals are better than bootstrap. Particularly, some of the asymptotic results derived in this paper depend on assumptions of normality -- I find this interesting as the Waldu paper claims that FDA techniques do not require a normality assumption for random effects. Maybe this is only true for "dense-enough" data.
+
+However, as I continued reading the second paper, this is when I became wary. The authors' proposed solution for functional data is PACE. PACE is capitalized throughout the paper, but I can't figure out what it stands for. However, it is a type of functional principal components analysis for sparse functional data. I do not like principal components and I will never like principal components. I think PCA is fine for predictive modeling where the explanations aren't really relevant, but in exploratory and causal modeling, PCA is often a tool for avoiding critical thinking. I think that in 99% of cases when applied, PCA provides very little (if any) useful information. However, I don't know that much about functional PCA so maybe it will surprise me.
+
+The rest of the first paper is a description of the methods used, followed by interpretation of the results. Essentially, the paper applies smoothing methods, functional PCA, and functional regression, which is essentially what I plan to do for my analysis. The authors of the second paper have also written another paper:
+
+> Yao F, Müller H, Wang J. Functional linear regression analysis for longitudinal data. *The Annals of Statistics.* 2005;22(6):2873-2903.
+
+This paper talks about functional regression methods extended to sparse functional data, so I guess I will need to glance over that paper as well. I would also be interested in finding more "applied" papers that apply and interpret these papers, like the Woldu paper I read today. In addition to the PCA analysis, which Woldu interprets quite well (well, as much as PCA can be interpreted), I want to try two regression methods. One method would be a functional response with non-functional covariates, where the pre-vaccination and post-vaccination HAI titers are all included in the smoothed trajectory. I'd also like to try a function-on-function regression model, where the post-vaccination trajectories are used to create smoothed curves, which include a smoothed curve of the pre-vaccination trajectory (and also other covariates) as predictors.
+
+I'm not going to go into detail about the theory and methods in these papers in this post, like I said earlier I'm mostly skimming these to get an idea of what FDA is and how I can use it. After I changed my PhD concentration to data analysis and modeling instead of biostatistics, I don't have to worry so much about theorems and lemmas anymore `r emoji::emoji("grin")`. I also am trying to spend an hour or less on these posts per day, unless the paper is really important to my other current goals, so I guess that's all I'll write about FDA. Hopefully I'll get to work on the actual analysis soon!
+
+<!--------------- appendices ----------------->
+
+```{r, echo=FALSE}
+refinery::insert_appendix(
+  repo_spec = params$repo, 
+  name = paste(params$date, params$slug, sep = "_")
+)
+```
+
+
+<!--------------- miscellanea ----------------->
+
+```{r redirect, echo=FALSE}
+refinery::insert_netlify_redirect(
+  slug = params$slug, 
+  date = params$date
+)
+```
+

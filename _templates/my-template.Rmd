@@ -12,7 +12,7 @@ author:
     orcid_id:  0000-0002-0184-6134
 date: INSERT-DATE-HERE
 preview: "static/INSERT-DATE-HERE.jpg"  # <---- UPDATE ME 
-creative_commons: CC BY SA
+creative_commons: CC BY-SA
 citation_url: https://blog.wzbillings.com/INSERT-SLUG-HERE 
 repository_url: https://github.com/wzbillings/papers-blog/
 output:
@@ -23,7 +23,6 @@ params:
   date: INSERT-DATE-HERE
   repo: wzbillings/papers-blog
   site: https://blog.wzbillings.com/
-bibliography: http://127.0.0.1:23119/better-bibtex/export/collection?/1/CHZJLM59.bibtex
 ---
 
 <!---

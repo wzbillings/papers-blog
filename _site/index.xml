@@ -7,7 +7,16 @@
     <description>A blog about what Zane is reading.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 08 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>FDA papers for class</title>
+      <dc:creator>Zane Billings</dc:creator>
+      <link>https://papers.wzbillings.com/posts/2022-04-11_FDA-bg</link>
+      <description>I briefly read a few papers on functional data analysis that I need to read for a class assignment. Hopefully the class assignment will be a paper eventually as well.</description>
+      <guid>https://papers.wzbillings.com/posts/2022-04-11_FDA-bg</guid>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://papers.wzbillings.com/posts/2022-04-11_FDA-bg/img.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Welcome to my blog!</title>
       <dc:creator>Zane Billings</dc:creator>
